@@ -3,80 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio website for an aspiring quantitative researcher focused on reinforcement learning.">
-    <title>Portfolio | Quantitative Researcher</title>
+    <meta name="description" content="RL quant research portfolio focused on robust policy learning, market microstructure modeling, and production-grade experimentation.">
+    <title>Kenneth LeGare | RL Quant Research</title>
     <link rel="stylesheet" href="design.css">
 </head>
 <body>
 
     <nav>
         <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#rl">Specialty</a>
+        <a href="#thesis">Research Thesis</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#methodology">Methodology</a>
         <a href="#projects">Projects</a>
     </nav>
 
     <div class="container">
         <section id="hero" class="visible">
-            <h1>Hi, I’m Kenneth LeGare.</h1>
-            <div class="subtitle">Aspiring Quantitative Researcher | Python & C++</div>
-            <p>I build robust, data-driven systems that bridge the gap between advanced artificial intelligence and quantitative finance, with a strict focus on Reinforcement Learning.</p>
+            <p class="eyebrow">Kenneth LeGare · Reinforcement Learning for Quantitative Finance</p>
+            <h1>Building robust RL systems for non-stationary markets.</h1>
+            <div class="subtitle">Aspiring Quant Researcher · Python, C++, Scientific Computing</div>
+            <p>I design and evaluate reinforcement learning agents under realistic market frictions, distribution shifts, and adversarial stress. My focus is statistically sound experimentation, risk-aware objectives, and implementation discipline suitable for production research teams.</p>
+
+            <div class="signal-grid">
+                <div class="signal-card">
+                    <h3>Research Focus</h3>
+                    <p>Policy optimization, robust control, and market simulation for signal extraction and execution.</p>
+                </div>
+                <div class="signal-card">
+                    <h3>Math Lens</h3>
+                    <p>Probability, statistical inference, linear algebra, stochastic processes, and optimization.</p>
+                </div>
+                <div class="signal-card">
+                    <h3>Engineering Lens</h3>
+                    <p>Reproducible pipelines, data-centric architecture, distributed compute, and model diagnostics.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <br>
-            <p>I am driven by the challenge of solving complex mathematical and computational problems. With a strong foundation in linear algebra, probability, and statistics, I focus on applying machine learning to dynamic environments.</p>
-            <p>Beyond algorithm design, I am passionate about the underlying infrastructure that makes research possible, with strong interests in computer networking, database management, and building out custom research hardware environments.</p>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <br>
-            <h3>Farmingdale State College</h3>
-            <p><strong>Focus:</strong> Computer Science & Artificial Intelligence</p>
-            <p><strong>Key Coursework:</strong> 400-level AI and Machine Learning</p>
-        </section>
-
-        <section id="rl">
-            <h2>Specialty: Reinforcement Learning</h2>
-            <br>
-            <p>My core technical focus is on applying Deep Reinforcement Learning (DRL) to complex financial environments. I don't just train agents to perform well in ideal conditions; I design algorithms that survive and adapt.</p>
+        <section id="thesis">
+            <h2>Research Thesis</h2>
+            <p>Financial markets are partially observed, regime-dependent systems where naive reward maximization fails. My research direction is to train agents that remain stable under regime changes by combining robust RL, uncertainty-aware evaluation, and execution-constrained environments.</p>
             <ul>
-                <li><strong>Causal Alpha Discovery & Optimal Hedging:</strong> Utilizing DRL to uncover underlying market drivers and execute mathematically sound hedging strategies.</li>
-                <li><strong>Adversarial Reinforcement Learning:</strong> Developing pipelines to rigorously stress-test trading agents against simulated market shocks and adversarial conditions before deployment.</li>
+                <li><strong>Problem Framing:</strong> Treat alpha generation and hedging as sequential decision processes with explicit costs and inventory constraints.</li>
+                <li><strong>Primary Objective:</strong> Maximize risk-adjusted returns while controlling drawdown sensitivity and turnover.</li>
+                <li><strong>Research Standard:</strong> Prioritize out-of-sample robustness over in-sample peak metrics.</li>
+            </ul>
+        </section>
+
+        <section id="toolkit">
+            <h2>Mathematical + Technical Toolkit</h2>
+            <div class="project-grid compact-grid">
+                <div class="project-card">
+                    <h3>Modeling + Statistics</h3>
+                    <p>Time-series analysis, Monte Carlo simulation, feature stationarity checks, and hypothesis-driven model iteration.</p>
+                    <div class="tech-stack">Probability | Statistics | Stochastic Processes</div>
+                </div>
+                <div class="project-card">
+                    <h3>RL + Optimization</h3>
+                    <p>Policy/value methods, reward shaping under constraints, and robustness testing under adversarial perturbations.</p>
+                    <div class="tech-stack">Deep RL | Control | Optimization</div>
+                </div>
+                <div class="project-card">
+                    <h3>Systems + Compute</h3>
+                    <p>Multi-node experimentation, Linux-first workflow, and efficient data pipelines for repeatable research.</p>
+                    <div class="tech-stack">Python | C++ | Linux | Networking</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="methodology">
+            <h2>Research Methodology</h2>
+            <p>My workflow mirrors a quant research loop: formalize assumptions, construct environment dynamics, train policies, and invalidate aggressively before iterating.</p>
+            <ul>
+                <li><strong>Environment Design:</strong> Include transaction costs, slippage proxies, liquidity limits, and delayed reward structures.</li>
+                <li><strong>Validation Discipline:</strong> Use rolling-window and regime-split backtests to detect overfitting and strategy decay.</li>
+                <li><strong>Failure Analysis:</strong> Inspect policy behavior during volatility spikes and abnormal spread expansion to locate fragility.</li>
             </ul>
         </section>
 
         <section id="projects">
-            <h2>Selected Projects</h2>
+            <h2>Selected Research Projects</h2>
             <div class="project-grid">
                 
                 <div class="project-card">
-                    <h3>Quant Trading using Deep RL</h3>
-                    <p>Designed a comprehensive framework utilizing deep RL to identify trading signals and execute optimal hedging strategies in complex financial environments.</p>
-                    <div class="tech-stack">Python | Deep RL Libraries</div>
+                    <h3>Robust RL for Signal + Hedging</h3>
+                    <p>Built a deep RL research framework for sequential trading and hedging decisions under explicit risk constraints and market impact assumptions.</p>
+                    <div class="tech-stack">Python | Deep RL | Time-Series Modeling</div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Robust Adversarial RL</h3>
-                    <p>Developed an adversarial pipeline to simulate extreme market volatility and test the resilience of trading agents.</p>
-                    <div class="tech-stack">Python | Reinforcement Learning</div>
-                    <br>
+                    <h3>Adversarial Market Stress Testing</h3>
+                    <p>Developed stress scenarios with regime shocks and adversarial perturbations to evaluate policy stability, drawdown behavior, and recovery dynamics.</p>
+                    <div class="tech-stack">Python | Reinforcement Learning | Scenario Simulation</div>
                     <a href="https://github.com/DataHiveMind" target="_blank" rel="noopener noreferrer">View GitHub Repo &rarr;</a>
                 </div>
 
                 <div class="project-card">
                     <h3>Distributed Home Quant Lab</h3>
-                    <p>Engineered a custom, multi-node local research environment utilizing a desktop, laptop, and Chromebook to handle distributed data processing, networking, and model training.</p>
-                    <div class="tech-stack">Hardware | Linux | Networking</div>
+                    <p>Engineered a multi-node research stack to support parallel experiments, efficient data flow, and reproducible training workflows.</p>
+                    <div class="tech-stack">Distributed Compute | Linux | Networking</div>
                 </div>
 
                 <div class="project-card">
-                    <h3>B-Tree Implementation</h3>
-                    <p>Built a robust B-Tree structure from scratch to manage complex Employee data nodes, demonstrating strong proficiency in low-level data structures.</p>
-                    <div class="tech-stack">Java | IntelliJ</div>
+                    <h3>Low-Level Data Structure Engineering</h3>
+                    <p>Implemented B-Tree indexing from scratch for high-integrity data access patterns, reinforcing algorithmic and systems-level reasoning.</p>
+                    <div class="tech-stack">Java | Data Structures | Performance Thinking</div>
                 </div>
 
             </div>
