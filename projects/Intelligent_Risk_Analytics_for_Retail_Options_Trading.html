@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Intelligent Risk Analytics for Retail Options Trading using HMM regime detection, GARCH forecasting, and VaR/CVaR modeling.">
+	<title>Intelligent Risk Analytics for Retail Options Trading | Project</title>
+	<link rel="stylesheet" href="../design.css">
+</head>
+<body>
+
+	<nav>
+		<a href="#hero">Overview</a>
+		<a href="#methodology">Methodology</a>
+		<a href="#results">Results</a>
+		<a href="#charts">Charts</a>
+		<a href="#stack">Implementation</a>
+		<a href="#repo">Repository</a>
+	</nav>
+
+	<div class="container">
+		<section id="hero" class="visible">
+			<p class="eyebrow">Project Case Study · Quantitative Risk Analytics</p>
+			<h1>Intelligent Risk Analytics for Retail Options Trading</h1>
+			<div class="subtitle">HMM Regime Detection · GARCH Volatility Forecasting · VaR/CVaR</div>
+			<p>A quantitative research framework for retail options risk management across equities, ETFs, and sector ETFs, focused on regime-awareness, volatility clustering, and tail-risk control.</p>
+
+			<div class="signal-grid">
+				<div class="signal-card">
+					<h3>Asset Coverage</h3>
+					<p>26 assets analyzed across equities, broad ETFs, and sector rotation instruments.</p>
+				</div>
+				<div class="signal-card">
+					<h3>Regime Model</h3>
+					<p>3 latent market regimes: low volatility, medium volatility, and crisis/high volatility.</p>
+				</div>
+				<div class="signal-card">
+					<h3>Risk Outcome</h3>
+					<p>Sharpe ratios above 1.5 on selected assets with detailed drawdown and tail-risk analysis.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="methodology">
+			<h2>Methodology</h2>
+			<p>The pipeline combines market-state inference, conditional volatility forecasting, and strategy-level risk diagnostics.</p>
+			<ul>
+				<li><strong>Regime Detection:</strong> Hidden Markov Models on returns, volatility, and volume features.</li>
+				<li><strong>Volatility Forecasting:</strong> GARCH(1,1) estimation for persistent volatility and shock response.</li>
+				<li><strong>Tail Risk Models:</strong> Historical VaR, Parametric VaR, and Conditional VaR (Expected Shortfall).</li>
+				<li><strong>Strategy Testing:</strong> Moving Average, Momentum, and Mean Reversion across multiple assets.</li>
+			</ul>
+		</section>
+
+		<section id="results">
+			<h2>Results Snapshot</h2>
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Strategy Highlights</h3>
+					<ul>
+						<li><strong>QQQ Momentum:</strong> 14.1% annual return, Sharpe 1.71</li>
+						<li><strong>AAPL Moving Average:</strong> 12.5% annual return, Sharpe 1.65</li>
+						<li><strong>SPY Moving Average:</strong> lower drawdown profile</li>
+					</ul>
+					<div class="tech-stack">Risk-Adjusted Metrics: Sharpe | Sortino | Calmar | Max Drawdown</div>
+				</div>
+
+				<div class="project-card">
+					<h3>Risk Behavior by Regime</h3>
+					<ul>
+						<li>Low-volatility regime shows strongest risk-adjusted performance.</li>
+						<li>High-volatility regime requires defensive exposure management.</li>
+						<li>Crisis periods show correlation spikes and diversification stress.</li>
+					</ul>
+					<div class="tech-stack">Regime-Aware Positioning and Stress Testing</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="charts">
+			<h2>Key Charts</h2>
+			<div class="chart-grid">
+				<div class="chart-panel">
+					<h3>GARCH Volatility Forecast</h3>
+					<img src="https://raw.githubusercontent.com/DataHiveMind/Intelligent_Risk_Analytics_for_Retail_Options_Trading/main/notebooks/results/plots/garch_volatility.png" alt="GARCH volatility forecast visualization">
+					<p class="chart-summary">This figure shows conditional volatility estimates over time and highlights clustering behavior typical in financial returns. The model captures persistence and shock response, which improves downstream risk calibration relative to static-volatility assumptions. Elevated variance bands align with stress periods, supporting the regime-aware interpretation in the broader framework. For execution and portfolio sizing, the chart provides an interpretable signal for tightening exposure during high-risk windows.</p>
+				</div>
+				<div class="chart-panel">
+					<h3>VaR Method Comparison</h3>
+					<img src="https://raw.githubusercontent.com/DataHiveMind/Intelligent_Risk_Analytics_for_Retail_Options_Trading/main/notebooks/results/plots/var_comparison.png" alt="Comparison of historical, parametric, and conditional VaR estimates">
+					<p class="chart-summary">This comparison plot contrasts historical VaR, parametric VaR, and conditional VaR under the same confidence assumptions. Conditional VaR extends beyond threshold loss and better reflects tail severity during market dislocations. The gap between methods illustrates why relying on one risk lens can understate adverse outcomes in non-Gaussian return distributions. Together, these estimates form a practical risk stack for both research validation and portfolio risk governance.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="stack">
+			<h2>Technical Implementation</h2>
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Core Modules</h3>
+					<p>Data ingestion, feature engineering, regime detection, risk modeling, vectorized backtesting, and visualization modules.</p>
+					<div class="tech-stack">Python | Pandas | NumPy | SciPy</div>
+				</div>
+				<div class="project-card">
+					<h3>Modeling Stack</h3>
+					<p>HMM models for latent state inference and GARCH/VaR frameworks for volatility and tail-loss estimation.</p>
+					<div class="tech-stack">hmmlearn | statsmodels | arch</div>
+				</div>
+				<div class="project-card">
+					<h3>Workflow</h3>
+					<p>Notebook-driven research for EDA, risk forecasting, and strategy evaluation with report-ready plots.</p>
+					<div class="tech-stack">Jupyter | Matplotlib | Seaborn</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="repo">
+			<h2>Repository</h2>
+			<p>Full source code, notebooks, and generated visualizations are available on GitHub.</p>
+			<p>
+				<a href="https://github.com/DataHiveMind/Intelligent_Risk_Analytics_for_Retail_Options_Trading" target="_blank" rel="noopener noreferrer">Open Project Repository &rarr;</a>
+			</p>
+		</section>
+	</div>
+
+	<footer>
+		<p>
+			<a href="../index.html">Back to Portfolio</a> |
+			<a href="https://github.com/DataHiveMind/Intelligent_Risk_Analytics_for_Retail_Options_Trading" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+		</p>
+		<p style="margin-top: 10px; font-size: 0.9rem;">© 2026 Kenneth LeGare. All rights reserved.</p>
+	</footer>
+
+	<script src="../function.js" defer></script>
+</body>
+</html>

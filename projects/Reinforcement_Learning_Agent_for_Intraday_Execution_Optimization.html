@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Reinforcement Learning Agent for Intraday Execution Optimization using Double DQN, limit-order-book simulation, latency/slippage modeling, and Monte Carlo risk analytics.">
+	<title>RL Agent for Intraday Execution Optimization | Project</title>
+	<link rel="stylesheet" href="../design.css">
+</head>
+<body>
+
+	<nav>
+		<a href="#hero">Overview</a>
+		<a href="#methodology">Methodology</a>
+		<a href="#results">Results</a>
+		<a href="#charts">Charts</a>
+		<a href="#stack">Implementation</a>
+		<a href="#repo">Repository</a>
+	</nav>
+
+	<div class="container">
+		<section id="hero" class="visible">
+			<p class="eyebrow">Project Case Study · RL Execution + Market Microstructure</p>
+			<h1>Reinforcement Learning Agent for Intraday Execution Optimization</h1>
+			<div class="subtitle">Double DQN · Limit Order Book Simulation · VaR/CVaR Analytics</div>
+			<p>This project develops an intraday execution RL framework with realistic latency and slippage effects, then evaluates PnL distributions with Monte Carlo simulation and tail-risk metrics across multiple large-cap tech tickers.</p>
+
+			<div class="signal-grid">
+				<div class="signal-card">
+					<h3>Agent Design</h3>
+					<p>Double DQN with replay buffer, target-network sync, and epsilon-greedy exploration.</p>
+				</div>
+				<div class="signal-card">
+					<h3>Execution Realism</h3>
+					<p>Simulated limit-order-book behavior includes latency sampling and slippage costs.</p>
+				</div>
+				<div class="signal-card">
+					<h3>Risk Lens</h3>
+					<p>Monte Carlo PnL, VaR, and CVaR are used to evaluate downside behavior.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="methodology">
+			<h2>Methodology</h2>
+			<p>The training and evaluation flow is designed for execution-quality optimization under intraday market uncertainty.</p>
+			<ul>
+				<li><strong>Environment:</strong> Gym-compatible execution simulator with market frictions.</li>
+				<li><strong>Learning Setup:</strong> Double DQN with experience replay and target updates for stability.</li>
+				<li><strong>Data Regime:</strong> Real tick data with multi-ticker evaluation coverage.</li>
+				<li><strong>Risk Evaluation:</strong> Repeated simulation for distribution-aware performance metrics.</li>
+			</ul>
+		</section>
+
+		<section id="results">
+			<h2>Evaluation Snapshot</h2>
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Monte Carlo PnL Metrics</h3>
+					<ul>
+						<li><strong>AAPL:</strong> Mean 4887.79, Std 64.09, VaR(5%) 4802.11</li>
+						<li><strong>AMZN:</strong> Mean 4399.75, Std 62.70, VaR(5%) 4292.34</li>
+						<li><strong>GOOGL:</strong> Mean 4384.85, Std 73.57, VaR(5%) 4242.64</li>
+						<li><strong>TSLA:</strong> Mean 9238.43, Std 5.23, VaR(5%) 9230.23</li>
+					</ul>
+					<div class="tech-stack">1000-Simulation Distribution Analysis</div>
+				</div>
+
+				<div class="project-card">
+					<h3>Cross-Ticker Coverage</h3>
+					<ul>
+						<li>Evaluated across AAPL, AMZN, GOOGL, META, MSFT, NVDA, and TSLA.</li>
+						<li>Includes per-ticker PnL distribution plots and tail-risk summaries.</li>
+						<li>Supports single-ticker and portfolio-style evaluation workflows.</li>
+					</ul>
+					<div class="tech-stack">Multi-Asset Execution Robustness</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="charts">
+			<h2>Key Charts</h2>
+			<div class="chart-grid">
+				<div class="chart-panel">
+					<h3>AAPL Monte Carlo PnL Distribution</h3>
+					<img src="https://raw.githubusercontent.com/DataHiveMind/Reinforcement-Learning-Agent-for-Intraday-Execution-Optimization/main/results/AAPL/AAPL_pnl_distribution.png" alt="AAPL Monte Carlo PnL distribution from intraday execution agent">
+					<p class="chart-summary">This distribution chart shows the spread of PnL outcomes from repeated simulation under the trained execution policy. The concentration around a positive mean with bounded left tail indicates that latency and slippage controls are functioning as intended for this instrument. Dispersion width gives an intuitive view of execution uncertainty that single-run backtests cannot capture. As a research artifact, the figure supports probabilistic decision-making around capital allocation and live deployment thresholds.</p>
+				</div>
+				<div class="chart-panel">
+					<h3>NVDA Monte Carlo PnL Distribution</h3>
+					<img src="https://raw.githubusercontent.com/DataHiveMind/Reinforcement-Learning-Agent-for-Intraday-Execution-Optimization/main/results/NVDA/NVDA_pnl_distribution.png" alt="NVDA Monte Carlo PnL distribution showing downside stress profile">
+					<p class="chart-summary">This NVDA distribution illustrates a materially weaker profile and highlights ticker-dependent execution difficulty. The left-shifted center and lower VaR boundary indicate that microstructure differences can degrade policy quality when market conditions change. Comparing this against stronger tickers demonstrates why cross-asset validation is necessary before production rollout. The chart motivates adaptive policy tuning and regime-conditioned execution logic rather than fixed single-policy assumptions.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="stack">
+			<h2>Technical Implementation</h2>
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Core Stack</h3>
+					<p>PyTorch models run inside a modular RL architecture with environment, training, and evaluation components separated for maintainability.</p>
+					<div class="tech-stack">Python | PyTorch | Double DQN</div>
+				</div>
+				<div class="project-card">
+					<h3>Data + Analytics</h3>
+					<p>Pandas/NumPy power tick-data processing, while Matplotlib/Seaborn visualize distributions and risk diagnostics.</p>
+					<div class="tech-stack">Pandas | NumPy | Matplotlib | Seaborn</div>
+				</div>
+				<div class="project-card">
+					<h3>Research Workflow</h3>
+					<p>CLI commands cover training, single evaluation, and Monte Carlo backtesting for repeatable experimental runs.</p>
+					<div class="tech-stack">CLI | Logging | Reproducible Experiments</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="repo">
+			<h2>Repository</h2>
+			<p>Full implementation, evaluation scripts, and result artifacts are available on GitHub.</p>
+			<p>
+				<a href="https://github.com/DataHiveMind/Reinforcement-Learning-Agent-for-Intraday-Execution-Optimization" target="_blank" rel="noopener noreferrer">Open Project Repository &rarr;</a>
+			</p>
+		</section>
+	</div>
+
+	<footer>
+		<p>
+			<a href="../index.html">Back to Portfolio</a> |
+			<a href="https://github.com/DataHiveMind/Reinforcement-Learning-Agent-for-Intraday-Execution-Optimization" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+		</p>
+		<p style="margin-top: 10px; font-size: 0.9rem;">© 2026 Kenneth LeGare. All rights reserved.</p>
+	</footer>
+
+	<script src="../function.js" defer></script>
+</body>
+</html>

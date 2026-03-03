@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Reinforcement Learning for Market Making with DQN and PPO agents, MLflow experiment tracking, and risk-aware backtesting.">
+	<title>Reinforcement Learning for Market Making | Project</title>
+	<link rel="stylesheet" href="../design.css">
+</head>
+<body>
+
+	<nav>
+		<a href="#hero">Overview</a>
+		<a href="#methodology">Methodology</a>
+		<a href="#results">Results</a>
+		<a href="#charts">Charts</a>
+		<a href="#stack">Implementation</a>
+		<a href="#repo">Repository</a>
+	</nav>
+
+	<div class="container">
+		<section id="hero" class="visible">
+			<p class="eyebrow">Project Case Study · Reinforcement Learning + Market Microstructure</p>
+			<h1>Reinforcement Learning for Market Making</h1>
+			<div class="subtitle">DQN + PPO Agents · Inventory Control · MLflow Tracking</div>
+			<p>A quantitative research framework for market making that learns bid-ask and inventory decisions with deep reinforcement learning, while enforcing risk controls through inventory penalties, position limits, and drawdown-aware evaluation.</p>
+
+			<div class="signal-grid">
+				<div class="signal-card">
+					<h3>Agents</h3>
+					<p>Multi-agent framework with DQN and PPO policies for trading decisions.</p>
+				</div>
+				<div class="signal-card">
+					<h3>Data</h3>
+					<p>Minute-level AAPL data with 50+ engineered market and technical features.</p>
+				</div>
+				<div class="signal-card">
+					<h3>Goal</h3>
+					<p>Maximize risk-adjusted returns while controlling inventory risk and drawdown.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="methodology">
+			<h2>Research Methodology</h2>
+			<p>The environment and training loop are designed to mirror realistic market making constraints.</p>
+			<ul>
+				<li><strong>State Space:</strong> Market features + inventory + cash + portfolio value.</li>
+				<li><strong>Action Space:</strong> Discrete actions {sell_big, sell_small, hold, buy_small, buy_big}.</li>
+				<li><strong>Reward Design:</strong> PnL delta with inventory penalty term to reduce position risk.</li>
+				<li><strong>Risk Controls:</strong> Position limits, transaction costs, slippage, and drawdown constraints.</li>
+			</ul>
+		</section>
+
+		<section id="results">
+			<h2>Experimental Results</h2>
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Out-of-Sample Backtest</h3>
+					<ul>
+						<li><strong>DQN:</strong> 12.5% return, Sharpe 1.84, Max Drawdown -8.2%</li>
+						<li><strong>PPO:</strong> 14.2% return, Sharpe 2.01, Max Drawdown -6.9%</li>
+						<li><strong>Buy &amp; Hold:</strong> 8.7% return, Sharpe 1.22, Max Drawdown -15.3%</li>
+					</ul>
+					<div class="tech-stack">Risk-Adjusted Outperformance vs Baselines</div>
+				</div>
+
+				<div class="project-card">
+					<h3>Training + Validation</h3>
+					<ul>
+						<li>DQN converged near 150 episodes with stable learning dynamics.</li>
+						<li>PPO achieved strong consistency with lower variance in returns.</li>
+						<li>MLflow tracked experiments, hyperparameters, and metric history.</li>
+					</ul>
+					<div class="tech-stack">Experiment Tracking and Reproducible Research</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="charts">
+			<h2>Key Charts</h2>
+			<div class="chart-grid">
+				<div class="chart-panel">
+					<h3>DQN Training Metrics</h3>
+					<img src="https://raw.githubusercontent.com/DataHiveMind/Reinforcement_Learning_for_Market_Making/main/reports/figures/dqn_training_metrics.png" alt="DQN training metrics over episodes">
+					<p class="chart-summary">This training-curve visualization tracks reward dynamics and stability as the DQN policy learns market-making behavior. Convergence shape provides a direct view into whether exploration, replay, and target updates are producing controlled policy improvement. Plateau behavior near later episodes suggests diminishing marginal gains and supports an evidence-based early-stopping or retuning decision. The figure is useful for recruiters and researchers because it ties implementation quality to measurable learning behavior rather than only final backtest numbers.</p>
+				</div>
+				<div class="chart-panel">
+					<h3>Risk-Adjusted Strategy Comparison</h3>
+					<img src="https://quickchart.io/chart?width=800&height=420&c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27DQN%27%2C%27PPO%27%2C%27Buy%26Hold%27%2C%27MeanRev%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Sharpe%27%2Cdata%3A%5B1.84%2C2.01%2C1.22%2C0.98%5D%2CbackgroundColor%3A%27rgba(59%2C130%2C246%2C0.85)%27%7D%5D%7D%2Coptions%3A%7Bplugins%3A%7Blegend%3A%7Bdisplay%3Afalse%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Sharpe%20Ratio%20by%20Strategy%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%7D%7D%7D%7D" alt="Sharpe ratio bar chart for DQN, PPO, Buy and Hold, and Mean Reversion">
+					<p class="chart-summary">This bar chart summarizes risk-adjusted performance across trained RL agents and baseline strategies using Sharpe ratio. PPO leads the set, while DQN also outperforms classical benchmark approaches under the same evaluation framing. The relative spacing between bars indicates that gains are not only return-driven but tied to volatility-aware consistency. In a research workflow, this chart acts as a compact decision aid for model selection before deeper stress testing and transaction-cost sensitivity checks.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="stack">
+			<h2>Technical Implementation</h2>
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Modeling Stack</h3>
+					<p>Custom RL implementation with PyTorch neural networks and Gymnasium-compatible environment design.</p>
+					<div class="tech-stack">Python | PyTorch | DQN | PPO | Gymnasium</div>
+				</div>
+				<div class="project-card">
+					<h3>Data + Features</h3>
+					<p>Feature engineering spans price/return dynamics, volatility measures, technical indicators, and microstructure signals.</p>
+					<div class="tech-stack">Pandas | NumPy | Feature Engineering</div>
+				</div>
+				<div class="project-card">
+					<h3>Infrastructure</h3>
+					<p>MLflow integration for experiment logging, model versioning, and reproducible training/evaluation workflows.</p>
+					<div class="tech-stack">MLflow | Backtesting | Performance Analytics</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="repo">
+			<h2>Repository</h2>
+			<p>Complete source code, notebooks, configuration files, and experiment artifacts are available on GitHub.</p>
+			<p>
+				<a href="https://github.com/DataHiveMind/Reinforcement_Learning_for_Market_Making" target="_blank" rel="noopener noreferrer">Open Project Repository &rarr;</a>
+			</p>
+		</section>
+	</div>
+
+	<footer>
+		<p>
+			<a href="../index.html">Back to Portfolio</a> |
+			<a href="https://github.com/DataHiveMind/Reinforcement_Learning_for_Market_Making" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+		</p>
+		<p style="margin-top: 10px; font-size: 0.9rem;">© 2026 Kenneth LeGare. All rights reserved.</p>
+	</footer>
+
+	<script src="../function.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Hierarchical DRL Multi-Strategy Fund: a deep reinforcement learning system with specialist trading agents and a master CIO allocator.">
+	<title>Hierarchical DRL Multi-Strategy Fund | Project</title>
+	<link rel="stylesheet" href="../design.css">
+</head>
+<body>
+
+	<nav>
+		<a href="#hero">Overview</a>
+		<a href="#performance">Performance</a>
+		<a href="#architecture">Architecture</a>
+		<a href="#charts">Charts</a>
+		<a href="#stack">Tech Stack</a>
+		<a href="#repo">Repository</a>
+	</nav>
+
+	<div class="container">
+		<section id="hero" class="visible">
+			<p class="eyebrow">Project Case Study · Reinforcement Learning + Portfolio Allocation</p>
+			<h1>Hierarchical DRL Multi-Strategy Fund</h1>
+			<div class="subtitle">7 Specialist Trading Agents + 1 Master CIO Allocator</div>
+			<p>This project implements a hierarchical deep reinforcement learning framework where specialist agents run distinct strategies and a master PPO agent dynamically allocates capital based on current market conditions and specialist behavior.</p>
+
+			<div class="signal-grid">
+				<div class="signal-card">
+					<h3>Core Result</h3>
+					<p>Master CIO Sharpe Ratio of 1.60 over the 2020-2024 test period.</p>
+				</div>
+				<div class="signal-card">
+					<h3>Risk Profile</h3>
+					<p>Maximum drawdown of -0.80%, materially lower than benchmark allocations.</p>
+				</div>
+				<div class="signal-card">
+					<h3>Research Focus</h3>
+					<p>Adaptive capital allocation with explicit transaction costs and slippage assumptions.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="performance">
+			<h2>Performance Snapshot</h2>
+			<p>Out-of-sample test period metrics for the Master CIO agent compared to standard baseline portfolio methods.</p>
+
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Master CIO DRL</h3>
+					<ul>
+						<li><strong>Total Return:</strong> 1.75%</li>
+						<li><strong>Annual Return:</strong> 7.20%</li>
+						<li><strong>Sharpe Ratio:</strong> 1.60</li>
+						<li><strong>Sortino Ratio:</strong> 2.63</li>
+						<li><strong>Calmar Ratio:</strong> 8.95</li>
+						<li><strong>Max Drawdown:</strong> -0.80%</li>
+					</ul>
+					<div class="tech-stack">Test Window: 2020-2024</div>
+				</div>
+
+				<div class="project-card">
+					<h3>Benchmark Context</h3>
+					<ul>
+						<li>6x higher Sharpe than equal-weight and mean-variance baselines (1.60 vs 0.27)</li>
+						<li>78% lower max drawdown vs equal-weight (-0.80% vs -3.57%)</li>
+						<li>Lower downside risk than full-capital ensemble approach</li>
+						<li>Maintains positive returns with stronger risk discipline</li>
+					</ul>
+					<div class="tech-stack">Risk-Adjusted Performance Priority</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="architecture">
+			<h2>System Architecture</h2>
+			<p>The hierarchy separates tactical signal generation from portfolio-level risk-aware allocation.</p>
+
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Specialist Layer (7 Agents)</h3>
+					<ul>
+						<li>Statistical Arbitrage (DDPG)</li>
+						<li>Market Making (DQN)</li>
+						<li>Factor Tracking (PPO)</li>
+						<li>Volatility Trading (DDPG)</li>
+						<li>Delta Hedging (DQN)</li>
+						<li>Futures Spreads (PPO)</li>
+						<li>FX Arbitrage (DDPG)</li>
+					</ul>
+					<div class="tech-stack">Specialized Policy Behaviors</div>
+				</div>
+
+				<div class="project-card">
+					<h3>Master CIO Layer</h3>
+					<ul>
+						<li><strong>Algorithm:</strong> PPO</li>
+						<li><strong>Input:</strong> Specialist metrics + market state</li>
+						<li><strong>Output:</strong> Dynamic allocation weights</li>
+						<li><strong>Objective:</strong> Optimize risk-adjusted portfolio performance</li>
+					</ul>
+					<div class="tech-stack">Hierarchical Portfolio Control</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="charts">
+			<h2>Key Charts</h2>
+			<div class="chart-grid">
+				<div class="chart-panel">
+					<h3>Equity Curves Comparison</h3>
+					<img src="https://raw.githubusercontent.com/DataHiveMind/The_Hierarchical_DRL_Multi_Strategy_Fund_Code/main/reports/plots/equity_curves_comparison.png" alt="Equity curves comparing master CIO strategy against baselines">
+					<p class="chart-summary">This chart compares cumulative performance across the master CIO policy and benchmark allocations over the same test horizon. The master layer shows smoother compounding than high-volatility alternatives despite lower absolute peaks. The relative path stability supports the thesis that adaptive allocation can improve robustness under non-stationary conditions. From a research standpoint, the figure demonstrates that risk-adjusted consistency is achieved without relying on a single specialist strategy.</p>
+				</div>
+				<div class="chart-panel">
+					<h3>Drawdown Comparison</h3>
+					<img src="https://raw.githubusercontent.com/DataHiveMind/The_Hierarchical_DRL_Multi_Strategy_Fund_Code/main/reports/plots/drawdown_comparison.png" alt="Drawdown comparison between hierarchical DRL and benchmark strategies">
+					<p class="chart-summary">This drawdown plot visualizes peak-to-trough losses for each allocation method and highlights downside control. The hierarchical policy maintains substantially shallower drawdown depth than equal-weight and ensemble alternatives during stress windows. The duration of underwater periods is also reduced, which is critical for practical capital retention and redeployment. The figure supports the central claim that dynamic specialist weighting improves portfolio resilience rather than only maximizing returns.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="stack">
+			<h2>Data + Tech Stack</h2>
+			<div class="project-grid compact-grid">
+				<div class="project-card">
+					<h3>Data and Backtesting</h3>
+					<p>Real market data is managed with ArcticDB and evaluated using a custom backtesting engine that models transaction costs and slippage.</p>
+					<div class="tech-stack">ArcticDB | Custom Backtester</div>
+				</div>
+				<div class="project-card">
+					<h3>Modeling and Training</h3>
+					<p>Deep RL models are implemented in PyTorch using DDPG, DQN, and PPO across specialist and master agents.</p>
+					<div class="tech-stack">Python | PyTorch | DDPG | DQN | PPO</div>
+				</div>
+				<div class="project-card">
+					<h3>Research Workflow</h3>
+					<p>Notebook-driven workflow covers data loading, specialist environment testing, agent training, and final visualization/reporting.</p>
+					<div class="tech-stack">Jupyter | Matplotlib | Seaborn</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="repo">
+			<h2>Repository</h2>
+			<p>The full codebase, reports, and plots are available in the GitHub repository.</p>
+			<p>
+				<a href="https://github.com/DataHiveMind/The_Hierarchical_DRL_Multi_Strategy_Fund_Code" target="_blank" rel="noopener noreferrer">Open Project Repository &rarr;</a>
+			</p>
+		</section>
+	</div>
+
+	<footer>
+		<p>
+			<a href="../index.html">Back to Portfolio</a> |
+			<a href="https://github.com/DataHiveMind/The_Hierarchical_DRL_Multi_Strategy_Fund_Code" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+		</p>
+		<p style="margin-top: 10px; font-size: 0.9rem;">© 2026 Kenneth LeGare. All rights reserved.</p>
+	</footer>
+
+	<script src="../function.js" defer></script>
+</body>
+</html>
