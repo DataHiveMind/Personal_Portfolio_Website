@@ -1,123 +1,132 @@
 # Personal_Portfolio_Website
+
 ## PART 1: CONTENT
-What is your full name as you want it displayed professionally?
+
+**What is your full name as you want it displayed professionally?**
 
 Kenneth LeGare.
 
-What is the purpose of your portfolio website?
+**What is the purpose of your portfolio website?**
 
-To showcase my academic research, technical projects, and skills in quantitative finance, machine learning, and software development. It will serve as a central hub for my professional and academic identity.
+To showcase my quantitative research frameworks, deep reinforcement learning models, and risk analytics to demonstrate my capability in market microstructure and algorithmic trading.
 
-Who is the target audience (employers, clients, peers, etc.)?
+**Who is the target audience (employers, clients, peers, etc.)?**
 
-Graduate admissions committees for PhD programs, quantitative finance recruiters, and fellow researchers or developers.
+Quantitative finance recruiters, PhD admissions committees, and fellow quantitative researchers.
 
-What skills do you want to highlight?
+**What skills do you want to highlight?**
 
-Applied Mathematics, Statistics, Reinforcement Learning, Python, Java, and Computer Networking.
+Deep Reinforcement Learning (DQN, PPO, DDPG), Risk Modeling (Monte Carlo, VaR, CVaR, GARCH), Market Microstructure simulation, and Machine Learning experiment tracking.
 
-What projects or work will you showcase?
+**What projects or work will you showcase?**
 
-"Quantitative Trading using Deep Reinforcement Learning: From Causal Alpha to Optimal Hedging", "Robust Adversarial RL for Stress Testing", and my Java BTree implementation.
+I will showcase four main case studies:
 
-How will you describe yourself in a short professional bio?
+- Reinforcement Learning for Market Making
+- Reinforcement Learning Agent for Intraday Execution Optimization
+- Intelligent Risk Analytics for Retail Options Trading
+- Hierarchical DRL Multi-Strategy Fund
 
-I am a student at Farmingdale State College with a strong foundation in applied math, statistics, and AI. I specialize in applying deep reinforcement learning to quantitative finance and am currently preparing for PhD programs in applied mathematics. I also run a home quant research lab to build and backtest my models.
+**How will you describe yourself in a short professional bio?**
 
-What pages will your site include (Home, About, Projects, Contact, etc.)?
+I am a quantitative researcher and developer specializing in the application of deep reinforcement learning to financial markets, with a focus on execution optimization, dynamic capital allocation, and rigorous tail-risk management.
 
-Home, About (including my home lab setup), Projects/Research, and Contact.
+**What pages will your site include (Home, About, Projects, Contact, etc.)?**
 
-What is your career goal or desired role?
+Home, About, Contact, and dedicated case study pages for Market Making, Intraday Execution, Risk Analytics, and my Hierarchical DRL Fund.
 
-To successfully transition into a PhD program in Applied Math and Statistics at Stony Brook, ultimately pursuing a career as a Quantitative Researcher.
+**What is your career goal or desired role?**
 
-What technologies or tools do you have experience with?
+To enter a PhD program in Applied Mathematics and Statistics and pursue a career as a Quantitative Researcher.
 
-Python, Java, HTML/CSS/JavaScript, and Git/GitHub.
+**What technologies or tools do you have experience with?**
 
-What achievements or experiences are worth highlighting?
+Python, PyTorch, Gymnasium, MLflow, Pandas, NumPy, SciPy, Matplotlib, Seaborn, and ArcticDB.
 
-Building a custom home quant research lab, developing causal alpha models for trading, and completing high-level coursework in AI and Machine Learning.
+**What achievements or experiences are worth highlighting?**
 
-What call-to-action should visitors take (contact you, view projects, download resume)?
+Designing a Master CIO agent that achieved a 1.60 Sharpe ratio with a -0.80% max drawdown, simulating realistic limit order books, and implementing HMM regime detection for options trading.
 
-View my research repositories and download my academic CV/resume.
+**What call-to-action should visitors take (contact you, view projects, download resume)?**
 
-Will you include a resume? In what format?
+Review my methodology and open the corresponding project repositories on GitHub.
+
+**Will you include a resume? In what format?**
 
 Yes, as a downloadable PDF.
 
-What social or professional links will you include (GitHub, LinkedIn, etc.)?
+**What social or professional links will you include (GitHub, LinkedIn, etc.)?**
 
-My GitHub profile (DataHiveMind) and my LinkedIn profile.
+My GitHub profile (DataHiveMind) and LinkedIn profile.
 
 ## PART 2: DESIGN
-What overall style will best represent you (minimalist, creative, professional, etc.)?
 
-Minimalist, analytical, and professional. The design should get straight to the data and code without unnecessary clutter.
+**What overall style will best represent you (minimalist, creative, professional, etc.)?**
 
-What color scheme will you use and why?
+A professional, structured "research report" style that emphasizes data, methodology, and empirical results over decorative elements.
 
-A "dark mode" theme featuring deep blues, dark greys, and crisp white text, with a subtle accent color (like teal or green). This reflects a developer/terminal aesthetic and is easy on the eyes.
+**What color scheme will you use and why?**
 
-What fonts will you use for headings and body text?
+A clean, high-contrast scheme that ensures my data visualizations (like PnL distributions and equity curves) stand out clearly.
 
-A clean sans-serif font like Inter or Roboto for high readability in body text, paired with a monospaced font like Fira Code for headers and technical terms to emphasize my programming background.
+**What fonts will you use for headings and body text?**
 
-How will your design reflect your personality or field?
+Clean, readable sans-serif fonts suitable for dense technical documentation and financial metrics.
 
-The structured, grid-based layout and dark theme will mirror the environments where I spend my time: IDEs, terminals, and data dashboards.
+**How will your design reflect your personality or field?**
 
-What layout will your homepage follow?
+The design mirrors academic quantitative finance papers and institutional model documentation, breaking information down strictly by Methodology, Results, Charts, and Tech Stack.
 
-A brief introductory "hero" section at the top, followed immediately by a grid highlighting my top three projects, and a minimal footer with contact links.
+**What layout will your homepage follow?**
 
-How will you organize project sections visually?
+A clean introduction followed by a grid layout showcasing the four main quantitative research projects.
 
-In a card-based grid layout. Each card will have a title, a brief abstract, visual tags for the tech stack used (e.g., Python, Java), and a link to the GitHub repository.
+**How will you organize project sections visually?**
 
-Will the site be mobile-friendly? How will you ensure responsiveness?
+I am utilizing CSS grids, specifically signal-grid for quick summaries and project-grid compact-grid for performance metrics and technical stacks.
 
-Yes. I will use CSS Flexbox and media queries to ensure the project grid collapses into a single column on smaller screens and the navigation menu remains accessible.
+**Will the site be mobile-friendly? How will you ensure responsiveness?**
 
-What visual hierarchy will guide visitors?
+Yes, using `<meta name="viewport" content="width=device-width, initial-scale=1.0">` and responsive CSS grids to ensure charts and data cards scale appropriately.
 
-Large, bold typography for my name and primary focus areas, guiding the user's eyes down through the featured projects, ending with the call-to-action buttons.
+**What visual hierarchy will guide visitors?**
 
-How will consistency be maintained across pages?
+An "eyebrow" tag for context, a main `<h1>` title, a technical subtitle, followed by core results, and finally deep-dive methodologies.
 
-By using a single design.css stylesheet with defined variables for all my colors, fonts, and spacing, ensuring every page pulls from the same design rules.
+**How will consistency be maintained across pages?**
 
-How will accessibility be considered (contrast, font size, readability)?
+All project pages link to a single, central `../design.css` stylesheet and share the exact same navigation and footer structure.
 
-I will ensure a high contrast ratio between the dark backgrounds and light text, use semantic HTML tags (<header>, <main>, <nav>), and include alt attributes on any images or icons.
+**How will accessibility be considered (contrast, font size, readability)?**
 
-Will you use icons, images, or illustrations? Why?
+By using semantic HTML structure (`<section>`, `<nav>`, `<footer>`) and ensuring every performance chart and plot has descriptive alt text explaining its purpose.
 
-I will use minimal, scalable vector graphics (SVGs) for tech stack icons and social links to quickly communicate tools and platforms without slowing down page load times.
+**Will you use icons, images, or illustrations? Why?**
 
-What portfolio websites inspired your design?
+Yes, I will heavily feature data visualizations, such as DQN training metrics, Monte Carlo distributions, GARCH volatility forecasts, and equity curves, to provide empirical proof of my models' performance.
 
-Minimalist academic pages and standard software developer portfolios that prioritize clean code presentation over flashy animations.
+**What portfolio websites inspired your design?**
+
+Institutional quant research blogs (like Two Sigma or AQR) and standard academic preprint layouts.
 
 ## PART 3: INTERACTIVITY
-What interactive elements will your site include (navigation menus, buttons, forms)?
 
-A responsive navigation bar, hover effects on project cards and buttons, and a functional contact form.
+**What interactive elements will your site include (navigation menus, buttons, forms)?**
 
-Will your site include a contact form? How will it work?
+In-page anchor navigation menus that allow users to jump directly to specific sections like Methodology, Performance, or Repository.
 
-Yes. I will use an HTML form connected to a free service like Formspree, which will forward the user's message directly to my email without requiring me to build a backend database.
+**Will your site include a contact form? How will it work?**
 
-What JavaScript features will you implement?
+Yes, an HTML form integrated with a lightweight backend service like Formspree to route emails directly to me.
 
-A dynamic filtering system so users can click buttons to sort my projects by category (e.g., showing only "Reinforcement Learning" or "Java" projects), and smooth scrolling for anchor links.
+**What JavaScript features will you implement?**
 
-How will users receive feedback from interactions?
+A global `function.js` script to handle smooth scrolling for the in-page navigation anchors and intersection observers to trigger visibility classes (like `.visible`) as the user scrolls down the research reports.
 
-Buttons and project cards will change color slightly or elevate when hovered over. The contact form will display a "Message Sent" confirmation upon successful submission.
+**How will users receive feedback from interactions?**
 
-How does interactivity improve the user experience?
+Hover states on the navigation links and GitHub repository outbound links.
 
-It makes navigating dense technical information much easier. Filtering allows recruiters or professors to instantly find the specific types of projects they care about.
+**How does interactivity improve the user experience?**
+
+By using a sticky or quick-jump navigation bar, technical recruiters or researchers can instantly bypass the methodology text and jump straight to the performance charts or the GitHub code if they are short on time.
